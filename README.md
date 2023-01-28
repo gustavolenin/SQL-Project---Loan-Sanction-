@@ -1,4 +1,4 @@
-# SQL-Project - Loan Sanction
+# Loan Sanction
 
 ## Projeto em Desenvolvimento
 
