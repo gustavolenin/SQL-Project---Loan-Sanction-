@@ -11,3 +11,8 @@ A empresa Dream Housing Finance lida com todos os empréstimos para habitação.
 
 **Problema**:
 A empresa deseja automatizar o processo de elegibilidade do empréstimo (em tempo real) com base nos detalhes do cliente fornecidos durante o preenchimento do formulário de inscrição on-line. Esses detalhes são sexo, estado civil, escolaridade, número de dependentes, renda, valor do empréstimo, histórico de crédito e outros. Para automatizar esse processo, eles criaram um problema para identificar os segmentos de clientes elegíveis para valores de empréstimo para atingir esses clientes especificamente. Aqui eles forneceram um conjunto de dados parcial.
+
+**1 - **
+
+**Solução do Problema**:
+Para solucionar esse problema utilizou-se o MySQL no qual foram realizadas queries SQL com o objetivo de responder as perguntas de negócio especificadas anteriormente. Dessa forma, as queries correspondentes a cada uma das perguntas estão disponíveis a seguir:
