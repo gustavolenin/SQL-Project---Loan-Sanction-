@@ -24,3 +24,6 @@ Para solucionar esse problema utilizou-se o MySQL no qual foram realizadas queri
 SELECT Education, AVG(Loan_Amount_Term) AS AVG_Loan FROM inputs.loan_sanction_train
 GROUP BY Education
 ```
+
+-> Resultado: 
+![image](https://user-images.githubusercontent.com/69591172/215917486-4088ffaf-de54-45e4-ba98-08733d60c95e.png)
