@@ -1,7 +1,5 @@
 # Loan Sanction
 
-## Projeto em Desenvolvimento
-
 ![image](https://user-images.githubusercontent.com/69591172/215238996-679635ae-600e-4c3f-bc28-6e631d1ee77c.png)
 
 Contextualização do problema:
