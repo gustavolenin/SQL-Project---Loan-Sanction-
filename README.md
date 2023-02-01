@@ -31,7 +31,7 @@ Resultado:
 
 Verifica-se que pessoas com graduação obtiveram maiores valores de empréstimos quando comparado com os valores concedidos às pessoas sem graduação.
 
-**2 - O montante do empréstimo varia em função go gênero e estado civil?**
+**2 - O montante do empréstimo varia em função do gênero e estado civil?**
 
 **Solução da Segunda Pergunta de Negócio**:
 
@@ -46,3 +46,19 @@ Resultado:
 ![image](https://user-images.githubusercontent.com/69591172/215919624-08f47d3e-e728-4c93-837d-f0e4b3f43b04.png)
 
 Nota-se que pessoas casadas receberam um crédito maior do que pessoas solteiras, além disso pode-se perceber também que, dentre os solteiros, as pessoas do sexo masculino obtiveram maiores valores de crédito concedidos.
+
+**3 - Profissionais autônomos receberam maior ou menor montante de empréstimo?**
+
+**Solução da Primeira Pergunta de Negócio**:
+
+```
+SELECT Self_Employed, AVG(LoanAmount) AS AVG_Loan FROM inputs.loan_sanction_train
+WHERE Self_Employed IN('Yes','No')
+GROUP BY Self_Employed
+```
+
+Resultado: 
+
+![image](https://user-images.githubusercontent.com/69591172/215920736-eef7d74e-533d-4a63-88b5-02e0e31cedaa.png)
+
+É possível ver que profissionais autônomos tiveram maior crédito.
