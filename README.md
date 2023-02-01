@@ -21,13 +21,13 @@ Para solucionar esse problema utilizou-se o MySQL no qual foram realizadas queri
 **Solução da Primeira Pergunta de Negócio**:
 
 ```
-SELECT Education, AVG(Loan_Amount_Term) AS AVG_Loan FROM inputs.loan_sanction_train
+SELECT Education, ROUND(AVG(Loan_Amount_Term),2) AS AVG_Loan FROM inputs.loan_sanction_train
 GROUP BY Education
 ```
 
 Resultado: 
 
-![image](https://user-images.githubusercontent.com/69591172/215917486-4088ffaf-de54-45e4-ba98-08733d60c95e.png)
+![image](https://user-images.githubusercontent.com/69591172/215922001-305b8b24-3f1f-48ab-90ca-9342dbce1199.png)
 
 Verifica-se que pessoas com graduação obtiveram maiores valores de empréstimos quando comparado com os valores concedidos às pessoas sem graduação.
 
@@ -36,14 +36,14 @@ Verifica-se que pessoas com graduação obtiveram maiores valores de empréstimo
 **Solução da Segunda Pergunta de Negócio**:
 
 ```
-SELECT Gender, Married, AVG(LoanAmount) AS AVG_Loan FROM inputs.loan_sanction_train
+SELECT Gender, Married, ROUND(AVG(LoanAmount),2) AS AVG_Loan FROM inputs.loan_sanction_train
 WHERE Gender IN('Male','Female')
 GROUP BY Gender, Married
 ```
 
 Resultado: 
 
-![image](https://user-images.githubusercontent.com/69591172/215919624-08f47d3e-e728-4c93-837d-f0e4b3f43b04.png)
+![image](https://user-images.githubusercontent.com/69591172/215921892-752c1e56-1647-4c6a-9c80-ae1288ed3671.png)
 
 Nota-se que pessoas casadas receberam um crédito maior do que pessoas solteiras, além disso pode-se perceber também que, dentre os solteiros, as pessoas do sexo masculino obtiveram maiores valores de crédito concedidos.
 
@@ -52,13 +52,13 @@ Nota-se que pessoas casadas receberam um crédito maior do que pessoas solteiras
 **Solução da Primeira Pergunta de Negócio**:
 
 ```
-SELECT Self_Employed, AVG(LoanAmount) AS AVG_Loan FROM inputs.loan_sanction_train
+SELECT Self_Employed, ROUND(AVG(LoanAmount),2) AS AVG_Loan FROM inputs.loan_sanction_train
 WHERE Self_Employed IN('Yes','No')
 GROUP BY Self_Employed
 ```
 
 Resultado: 
 
-![image](https://user-images.githubusercontent.com/69591172/215920736-eef7d74e-533d-4a63-88b5-02e0e31cedaa.png)
+![image](https://user-images.githubusercontent.com/69591172/215921827-9fd54763-36aa-417b-b3db-9e37ca1b6d99.png)
 
 É possível ver que profissionais autônomos tiveram maior crédito.
