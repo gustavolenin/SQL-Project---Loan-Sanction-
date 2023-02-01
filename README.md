@@ -49,7 +49,7 @@ Nota-se que pessoas casadas receberam um crédito maior do que pessoas solteiras
 
 **3 - Profissionais autônomos receberam maior ou menor montante de empréstimo?**
 
-**Solução da Primeira Pergunta de Negócio**:
+**Solução da Terceira Pergunta de Negócio**:
 
 ```
 SELECT Self_Employed, ROUND(AVG(LoanAmount),2) AS AVG_Loan FROM inputs.loan_sanction_train
@@ -65,7 +65,7 @@ Resultado:
 
 **4 - Dentre os aplicantes casados, o montante do empréstimo é maior para aqueles com bom histórico de pagamento?**
 
-**Solução da Primeira Pergunta de Negócio**:
+**Solução da Quarta Pergunta de Negócio**:
 
 ```
 SELECT Credit_History, ROUND(AVG(LoanAmount),2) AS AVG_Loan FROM inputs.loan_sanction_train
@@ -81,7 +81,7 @@ Confirma-se que esse perfil de aplicante teve um maior valor de crédito concedi
 
 **5 - Qual foi a renda média dentre os aplicantes solteiros e classificados como maus pagadores?**
 
-**Solução da Primeira Pergunta de Negócio**:
+**Solução da Quinta Pergunta de Negócio**:
 
 ```
 SELECT AVG(ApplicantIncome) AS AVG_Applicant_Income FROM inputs.loan_sanction_train
