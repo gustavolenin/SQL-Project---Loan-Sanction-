@@ -82,10 +82,10 @@ Confirma-se que esse perfil de aplicante teve um maior valor de crédito concedi
 **Solução da Quinta Pergunta de Negócio**:
 
 ```
-SELECT AVG(ApplicantIncome) AS AVG_Applicant_Income FROM inputs.loan_sanction_train
+SELECT ROUND(AVG(ApplicantIncome),2) AS AVG_Applicant_Income FROM inputs.loan_sanction_train
 WHERE Married = 'No' AND Credit_History = 0
 ```
 
 Resultado: 
 
-![image](https://user-images.githubusercontent.com/69591172/215926040-67973ecf-648c-436d-9848-a70fe04bff06.png)
+![image](https://user-images.githubusercontent.com/69591172/215926309-5ffb5413-b643-4222-b2aa-5f1571865034.png)
