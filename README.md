@@ -16,7 +16,7 @@ Para solucionar esse problema utilizou-se o MySQL no qual foram realizadas queri
 
 **1 - O montante do empréstimo varia em função do nível educacional do requerente?**
 
-**Solução da Primeira Pergunta de Negócio**:
+**Solução**:
 
 ```
 SELECT Education, ROUND(AVG(Loan_Amount_Term),2) AS AVG_Loan FROM inputs.loan_sanction_train
@@ -31,7 +31,7 @@ Verifica-se que pessoas com graduação obtiveram maiores valores de empréstimo
 
 **2 - O montante do empréstimo varia em função do gênero e estado civil?**
 
-**Solução da Segunda Pergunta de Negócio**:
+**Solução**:
 
 ```
 SELECT Gender, Married, ROUND(AVG(LoanAmount),2) AS AVG_Loan FROM inputs.loan_sanction_train
@@ -47,7 +47,7 @@ Nota-se que pessoas casadas receberam um crédito maior do que pessoas solteiras
 
 **3 - Profissionais autônomos receberam maior ou menor montante de empréstimo?**
 
-**Solução da Terceira Pergunta de Negócio**:
+**Solução**:
 
 ```
 SELECT Self_Employed, ROUND(AVG(LoanAmount),2) AS AVG_Loan FROM inputs.loan_sanction_train
@@ -63,7 +63,7 @@ Resultado:
 
 **4 - Dentre os aplicantes casados, o montante do empréstimo é maior para aqueles com bom histórico de pagamento?**
 
-**Solução da Quarta Pergunta de Negócio**:
+**Solução**:
 
 ```
 SELECT Credit_History, ROUND(AVG(LoanAmount),2) AS AVG_Loan FROM inputs.loan_sanction_train
@@ -79,7 +79,7 @@ Confirma-se que esse perfil de aplicante teve um maior valor de crédito concedi
 
 **5 - Qual foi a renda média dentre os aplicantes solteiros e classificados como maus pagadores?**
 
-**Solução da Quinta Pergunta de Negócio**:
+**Solução**:
 
 ```
 SELECT ROUND(AVG(ApplicantIncome),2) AS AVG_Applicant_Income FROM inputs.loan_sanction_train
