@@ -62,3 +62,19 @@ Resultado:
 ![image](https://user-images.githubusercontent.com/69591172/215921827-9fd54763-36aa-417b-b3db-9e37ca1b6d99.png)
 
 É possível ver que profissionais autônomos tiveram maior crédito.
+
+**4 - Dentre os aplicantes casados, o montante do empréstimo é maior para aqueles com bom histórico de pagamento?**
+
+**Solução da Primeira Pergunta de Negócio**:
+
+```
+SELECT Credit_History, ROUND(AVG(LoanAmount),2) AS AVG_Loan FROM inputs.loan_sanction_train
+WHERE Married = 'Yes'
+GROUP BY Credit_History
+```
+
+Resultado: 
+
+![image](https://user-images.githubusercontent.com/69591172/215922533-316a7090-033d-488c-a15d-ec2d5e8b6980.png)
+
+Confirma-se que esse perfil de aplicante teve um maior valor de crédito concedido comparado aos maus pagadores.
