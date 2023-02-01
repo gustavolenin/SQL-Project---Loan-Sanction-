@@ -78,3 +78,16 @@ Resultado:
 ![image](https://user-images.githubusercontent.com/69591172/215922533-316a7090-033d-488c-a15d-ec2d5e8b6980.png)
 
 Confirma-se que esse perfil de aplicante teve um maior valor de crédito concedido comparado aos maus pagadores.
+
+**5 - Qual foi a renda média dentre os aplicantes solteiros e classificados como maus pagadores?**
+
+**Solução da Primeira Pergunta de Negócio**:
+
+```
+SELECT AVG(ApplicantIncome) AS AVG_Applicant_Income FROM inputs.loan_sanction_train
+WHERE Married = 'No' AND Credit_History = 0
+```
+
+Resultado: 
+
+![image](https://user-images.githubusercontent.com/69591172/215926040-67973ecf-648c-436d-9848-a70fe04bff06.png)
