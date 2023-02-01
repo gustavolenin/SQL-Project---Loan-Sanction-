@@ -25,5 +25,6 @@ SELECT Education, AVG(Loan_Amount_Term) AS AVG_Loan FROM inputs.loan_sanction_tr
 GROUP BY Education
 ```
 
--> Resultado: 
+Resultado: 
+
 ![image](https://user-images.githubusercontent.com/69591172/215917486-4088ffaf-de54-45e4-ba98-08733d60c95e.png)
