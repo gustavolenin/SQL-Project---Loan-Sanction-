@@ -16,7 +16,7 @@ Para solucionar esse problema utilizou-se o MySQL no qual foram realizadas queri
 
 **Perguntas de Negócio**
 
-**1 - O Montante do Empréstimo varia em função do nível educacional do requerente?**
+**1 - O montante do empréstimo varia em função do nível educacional do requerente?**
 
 **Solução da Primeira Pergunta de Negócio**:
 
@@ -28,3 +28,21 @@ GROUP BY Education
 Resultado: 
 
 ![image](https://user-images.githubusercontent.com/69591172/215917486-4088ffaf-de54-45e4-ba98-08733d60c95e.png)
+
+Verifica-se que pessoas com graduação obtiveram maiores valores de empréstimos quando comparado com os valores concedidos às pessoas sem graduação.
+
+**2 - O montante do empréstimo varia em função go gênero e estado civil?**
+
+**Solução da Segunda Pergunta de Negócio**:
+
+```
+SELECT Gender, Married, AVG(LoanAmount) AS AVG_Loan FROM inputs.loan_sanction_train
+WHERE Gender IN('Male','Female')
+GROUP BY Gender, Married
+```
+
+Resultado: 
+
+![image](https://user-images.githubusercontent.com/69591172/215919624-08f47d3e-e728-4c93-837d-f0e4b3f43b04.png)
+
+Nota-se que pessoas casadas receberam um crédito maior do que pessoas solteiras, além disso pode-se perceber também que, dentre os solteiros, as pessoas do sexo masculino obtiveram maiores valores de crédito concedidos.
