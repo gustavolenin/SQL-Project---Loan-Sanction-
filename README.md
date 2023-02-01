@@ -12,6 +12,8 @@ A empresa deseja automatizar o processo de elegibilidade do empréstimo (em temp
 
 Para solucionar esse problema utilizou-se o MySQL no qual foram realizadas queries SQL com o objetivo de responder as perguntas de negócio especificadas a seguir.
 
+[Clique aqui](https://www.kaggle.com/datasets/rishikeshkonapure/home-loan-approval)para maiores informações a respeito do problema.
+
 **Perguntas de Negócio**
 
 **1 - O montante do empréstimo varia em função do nível educacional do requerente?**
